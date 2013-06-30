@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>MVC 4 HTML 5 Video Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="html5, video, mvc4, html5 video, html5 video mvc, mvc html5 video" />
+    <meta name="description" content="MVC4 HTML 5 Video, Internet Explorer 9+, Firefox, Opera, Chrome, and Safari support the video element" />
+    <meta name="copyright" content="bhaumik patel" />
+    <meta name="author" content="Bhaumik Patel" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="~/Content/css/kickstart.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <div class="grid flex">
+        <div class="col_12">
+            <!-- Menu Horizontal -->
+            <ul class="col_12 menu">
+                <li class="current"><a href="~/"><i class="icon-facetime-video"></i>&nbsp;MVC4 HTML
+                    5 Video</a></li>
+                <li><a href="~/Home/Documents"><i class="icon-book"></i>&nbsp;Document</a></li>
+                <li><a href="#download" class="button green small"><i class="icon-download-alt icon-large icon-white">
+                </i>&nbsp;&nbsp;Download</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid flex">
+        <!-- ===================================== END HEADER ===================================== -->
+        <div class="col_12">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- END GRID -->
+    <div class="grid flex">
+        <div class="col_12">
+            <div class="col_12 callout" style="padding: 10px;">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mvcvideo.apphb.com/">
+                    Tweet</a>
+                <script>                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } } (document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="http://mvcvideo.apphb.com/" data-send="true" data-layout="button_count"
+                    data-width="450" data-show-faces="false">
+                </div>
+                <div id="fb-root">
+                </div>
+                <script>                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    } (document, 'script', 'facebook-jssdk'));</script>
+            </div>
+        </div>
+    </div>
+    <div class="grid flex">
+        <div class="col_12">
+            <div id="download" class="col_12 callout">
+                <div class="col_12">
+                    <h5>
+                        nuget package <a href="http://nuget.org/packages/MVC4.Paging/" id="nuget-link" target="_blank"
+                            data-original-title="" title=""><i class="icon-globe" style="color: #fff;"></i>
+                        </a>
+                    </h5>
+                    <div class="nuget-badge">
+                        <code>PM&gt; Install-Package MVC4.Video</code>
+                    </div>
+                </div>
+                <div class="col_12">
+                    <h5>
+                        Download</h5>
+                    <div>
+                        <a class="button green" href="http://www.dropbox.com/s/f617wsqurqiqr6i/MVCVideoDemo.rar?dl=1"
+                            id="boxdownload" target="_blank" title=""><i class="icon-download-alt icon-large icon-white">
+                            </i>&nbsp;&nbsp;Demo Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <!-- ===================================== START FOOTER ===================================== -->
+    <div id="footer">
+        <p class="muted credit">
+            &copy; Copyright @DateTime.Now.Date.Year <i class="icon-globe"></i>&nbsp;<a href="#"
+                title="">mvcvideo.apphb.com</a> | <i class="icon-user"></i>&nbsp;Developed by
+            <b>Bhaumik Patel</b>
+        </p>
+    </div>
+    <script src="~/Content/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="~/Content/js/kickstart.js" type="text/javascript"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

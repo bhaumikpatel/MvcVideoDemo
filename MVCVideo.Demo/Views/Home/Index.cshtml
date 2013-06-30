@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h4 class="col_12">
+    MVC 4 HTML 5 Video Control</h4>
+<div>
+    <div class="col_6">
+        <div class="caption">
+            @Html.Video(new VideoOptions()
+{
+    Mp4Url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+    WebmUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
+    OggUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv",
+    PosterUrl = "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
+    HasPoster = true,
+    VideoNotSupported = "<img alt=\"Big Buck Bunny\" src=\"http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg\" width=\"640\" height=\"360\" title=\"No video playback capabilities, please download the video below\" />",
+    HasDownloadLink = true
+}, new { @class = "video-responsive", id = "video1", width = "640", height = "360" })
+            <span>
+                <h5 class="bold">
+                    Big Buck Bunny HTML 5 Video</h5>
+                <p>
+                    The HTML5 draft specification introduced the video element for the purpose of playing
+                    videos or movies, Many modern websites show videos. HTML5 provides a standard for
+                    showing them.
+                </p>
+            </span>
+        </div>
+    </div>
+    <div class="col_6">
+        <div>
+            <h5>
+                <i class="icon-wrench"></i>&nbsp;Setup</h5>
+            <div>
+                <pre>
+@@Html.Video(new VideoOptions()
+{
+    Mp4Url = &quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4&quot;,
+    WebmUrl = &quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm&quot;,
+    OggUrl = &quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv&quot;,
+    PosterUrl = &quot;http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg&quot;,
+    HasPoster = true,
+    HasDownloadLink = true,
+    VideoNotSupported = &quot;&lt;p&gt;No video playback capabilities, please download the video below&lt;/p&gt;&quot;
+}, new { @@class = &quot;video-responsive&quot;, id = &quot;video1&quot; })
+            </pre>
+            </div>
+        </div>
+        <div>
+            <h5>
+                Notes</h5>
+            Don't forget to add namesapace in web.config under <code class="string">&lt;namespaces&gt;</code> tag.
+            <pre>&lt;add namespace=&quot;MVCVideo&quot; /&gt;</pre>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>

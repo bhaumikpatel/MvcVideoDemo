@@ -1,0 +1,409 @@
+﻿@{
+    ViewBag.Title = "Documents";
+}
+<div class="col_12">
+    <h4>
+        Document</h4>
+    <div>
+        <h6 class="bold">
+            <i class="icon-globe"></i>&nbsp;Browser Support</h6>
+        <div class="work-content">
+            <p>
+                Internet Explorer 9+, Firefox, Opera, Chrome, and Safari support the <code>&lt;video&gt;</code>
+                element.</p>
+            <p>
+                <b>Note:</b> Internet Explorer 8 and earlier versions, do not support the <code>&lt;video&gt;</code>
+                element.</p>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+        <h6 class="bold">
+            <i class="icon-cogs"></i>&nbsp;Video Formats and Browser Support</h6>
+        <div class="work-content">
+            <p>
+                Currently, there are 3 supported video formats for the <code>&lt;video&gt;</code>
+                element: MP4, WebM, and Ogg:</p>
+            <ul class="alt">
+                <li><b>MP4</b> = MPEG 4 files with H264 video codec and AAC audio codec</li>
+                <li><b>WebM</b> = WebM files with VP8 video codec and Vorbis audio codec</li>
+                <li><b>Ogg</b> = Ogg files with Theora video codec and Vorbis audio codec</li>
+            </ul>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th width="25%">
+                            Browser
+                        </th>
+                        <th width="25%">
+                            MP4 H.264
+                        </th>
+                        <th width="25%">
+                            WebM
+                        </th>
+                        <th width="25%">
+                            Ogg
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Internet Explorer 9+
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chrome 6+
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Firefox 3.6+
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Safari 5+
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Opera 10.6+
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                        <td>
+                            <i class="icon-ok green icon-large"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+        <h6 class="bold">
+            <i class="icon-cog"></i>&nbsp;Options</h6>
+        <div class="work-content">
+            <table class="striped" id="docs-options-table">
+                <thead>
+                    <tr>
+                        <th>
+                            Attribute
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Default
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            HasControls
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            true
+                        </td>
+                        <td>
+                            Number of items display in each page.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasPoster
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            false
+                        </td>
+                        <td>
+                            You can set total item count otherwise model itself total items get and set.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasLoop
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            false
+                        </td>
+                        <td>
+                            It marks the current page.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasMuted
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            false
+                        </td>
+                        <td>
+                            You can change the text of the page items. Default text value set as a below.
+                            <pre>ItemTexts = <span class="key">new</span> <span class="option-value">ItemTexts</span>() { First = <span
+                                class="string">"First"</span>, Previous = <span class="string">"«"</span>, Page = <span
+                                    class="string">""</span> , Next = <span class="string">"»"</span>, Last = <span class="string">"Last"</span>  }</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasAutoplay
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            false
+                        </td>
+                        <td>
+                            Tooltip text can be changed. Also set custom current page number position using
+                            <span class="string">{0}</span>, Default text value set as a below.
+                            <pre>TooltipTitles = <span class="key">new</span> <span class="option-value">TooltipTitles</span>() { First = <span
+                                class="string">"Go to first page"</span>, 
+                                      Previous = <span class="string">"Go to previous page"</span>, 
+                                      Page = <span class="string">"{0}"</span> , 
+                                      Next = <span class="string">"Go to next page"</span>, 
+                                      Last = <span class="string">"Go to last page"</span> }</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasPreload
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            true
+                        </td>
+                        <td>
+                            Controls the size of output pagination component. Accepts values: <i class="option-value">
+                                mini</i>, <i class="option-value">small</i>, <i class="option-value">normal</i>,
+                            <i class="option-value">large</i>. Those values maps the pagination sizing class
+                            <i class="option-value">pagination-mini</i>, <i class="option-value">pagination-small</i>
+                            and <i class="option-value">pagination-large</i> in Bootstrap Pagination.
+                            <pre>Size = <span class="option-value">Size</span>.normal</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PosterUrl
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            string
+                        </td>
+                        <td>
+                            Controls the alignment of the pagination component. It accepts values <i class="option-value">
+                                left</i>, <i class="option-value">center</i> and <i class="option-value">right</i>.
+                            Those values maps to the alignment class <i class="option-value">pagination-centered</i>
+                            and <i class="option-value">pagination-right</i> in Bootstrap Pagination.
+                            <pre>Alignment = <span class="option-value">Alignment</span>.left,</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mp4Url
+                        </td>
+                        <td>
+                            string
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            Set bool value for next and previous button
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            WebmUrl
+                        </td>
+                        <td>
+                            string
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            Set bool value for first and last button
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            OggUrl
+                        </td>
+                        <td>
+                            string
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            Set bool value for 1,2,3,4,5 Paging list.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VideoNotSupported
+                        </td>
+                        <td>
+                            string
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            Set bool value for 1,2,3,4,5 Paging list.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            HasDownloadLink
+                        </td>
+                        <td>
+                            bool
+                        </td>
+                        <td>
+                            false
+                        </td>
+                        <td>
+                            It marks the current page.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+        <h6 class="bold">
+            <i class="icon-reorder"></i>&nbsp;HTML Structure</h6>
+        <div class="work-content">
+        <pre>
+&lt;video controls poster=&quot;http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg&quot; width=&quot;640&quot; height=&quot;360&quot;&gt;
+	&lt;source src=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+	&lt;source src=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm&quot; type=&quot;video/webm&quot; /&gt;
+	&lt;source src=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv&quot; type=&quot;video/ogg&quot; /&gt;
+&lt;/video&gt;
+&lt;p&gt;
+	&lt;strong&gt;Download video:&lt;/strong&gt; &lt;a href=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4&quot;&gt;MP4 format&lt;/a&gt; | &lt;a href=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv&quot;&gt;Ogg format&lt;/a&gt; | &lt;a href=&quot;http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm&quot;&gt;WebM format&lt;/a&gt;
+&lt;/p&gt;</pre>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+        <h6 class="bold">
+            <i class="icon-facetime-video"></i>&nbsp;MIME Types for Video Formats</h6>
+        <div class="work-content">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th width="50%">
+                            Format
+                        </th>
+                        <th width="50%">
+                            MIME-type
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            MP4
+                        </td>
+                        <td>
+                            video/mp4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            WebM
+                        </td>
+                        <td>
+                            video/webm
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ogg
+                        </td>
+                        <td>
+                            video/ogg
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <h6>
+                    Add a MIME type in IIS</h6>
+                <ol>
+                    <li>Open IIS Manager and navigate to the level you want to manage. For information about
+                        opening IIS Manager. </li>
+                    <li>In <strong>Features View</strong>, double-click <strong>MIME Types</strong>.
+                    </li>
+                    <li>In the <strong>Actions</strong> pane, click <strong>Add.</strong> </li>
+                    <li>In the <strong>Add MIME Type</strong> dialog box, type a file name extension in
+                        the <strong>File name extension</strong> text box. For example, type <strong>.mp4</strong>.
+                    </li>
+                    <li>Type a MIME type in the <strong>MIME type</strong> text box. For example, type <strong>
+                        video/mp4</strong>. </li>
+                    <li>Click <strong>OK</strong>. </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
