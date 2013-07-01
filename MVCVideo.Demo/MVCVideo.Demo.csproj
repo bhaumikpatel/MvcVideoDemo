@@ -187,6 +187,11 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\css\fonts\fontawesome\css\fontawesome-webfont.eot" />
+    <None Include="Content\css\fonts\fontawesome\css\fontawesome-webfont.svg" />
+    <None Include="Content\css\fonts\fontawesome\css\fontawesome-webfont.ttf" />
+    <None Include="Content\css\fonts\fontawesome\css\fontawesome-webfont.woff" />
+    <None Include="Content\css\fonts\fontawesome\css\FontAwesome.otf" />
     <None Include="Content\css\fonts\fontawesome\font\fontawesome-webfont.eot">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
