@@ -1,21 +1,23 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-<h4 class="col_12">
+<h4 class="col_12" style="margin-top: 0px; margin-bottom: 0px;">
     MVC 4 HTML 5 Video Control</h4>
 <div>
     <div class="col_6">
         <div class="caption">
             @Html.Video(new VideoOptions()
-{
-    Mp4Url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
-    WebmUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
-    OggUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv",
-    PosterUrl = "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
-    HasPoster = true,
-    VideoNotSupported = "<img alt=\"Big Buck Bunny\" src=\"http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg\" width=\"640\" height=\"360\" title=\"No video playback capabilities, please download the video below\" />",
-    HasDownloadLink = true
-}, new { @class = "video-responsive", id = "video1", width = "640", height = "360" })
+       {
+           Mp4Url = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+           WebmUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm",
+           OggUrl = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv",
+           PosterUrl = "http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg",
+           HasPoster = true,
+           VideoNotSupported = "<img alt=\"Big Buck Bunny\" src=\"http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg\" width=\"640\" height=\"360\" title=\"No video playback capabilities, please download the video below\" />",
+           HasDownloadLink = true,
+           TrackEnable = true,
+           Track = new List<Track>() { new Track() { Src = "Content/audio/captions.vtt" } }
+       }, new { @class = "video-responsive", id = "video1", width = "640", height = "360" })
             <span>
                 <h5 class="bold">
                     Big Buck Bunny HTML 5 Video</h5>
@@ -41,7 +43,9 @@
     PosterUrl = &quot;http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg&quot;,
     HasPoster = true,
     HasDownloadLink = true,
-    VideoNotSupported = &quot;&lt;p&gt;No video playback capabilities, please download the video below&lt;/p&gt;&quot;
+    VideoNotSupported = &quot;&lt;p&gt;No video playback capabilities, please download the video below&lt;/p&gt;&quot;,
+    TrackEnable = true,
+    Track = new List&lt;Track&gt;() { new Track() { Src = &quot;Content/audio/captions.vtt&quot; } }
 }, new { @@class = &quot;video-responsive&quot;, id = &quot;video1&quot; })
             </pre>
             </div>
@@ -49,8 +53,49 @@
         <div>
             <h5>
                 Notes</h5>
-            Don't forget to add namesapace in web.config under <code class="string">&lt;namespaces&gt;</code> tag.
+            Don't forget to add namesapace in web.config under <code class="string">&lt;namespaces&gt;</code>
+            tag.
             <pre>&lt;add namespace=&quot;MVCVideo&quot; /&gt;</pre>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
+<div>
+    <div class="col_6">
+        <h4 class="col_12" style="margin-top: 0px;">
+            MVC 4 HTML 5 Audio Control</h4>
+        <div class="caption">
+            @Html.Audio(new AudioOptions()
+{
+    Mp3Url = "Content/audio/jazz.mp3",
+    OggUrl = "Content/audio/jazz.ogg",
+    WavUrl = "Content/audio/jazz.wav",
+    AudioNotSupported = "<p>This browser does not support the audio.</p>",
+    HasDownloadLink = true
+}, new { @class = "audio", id = "audio1", @style = "margin-top: 3%;margin-left: 3%;" })
+            <div>
+                HTML5 provides a quick and easy way to add audio files to be played on a website.
+                Using the audio element an audio clip can be added to a page. An audio element also
+                needs a source URL specified via the src attribute.
+            </div>
+        </div>
+    </div>
+    <div class="col_6">
+        <div>
+            <h5 style="margin-top: 0px;">
+                <i class="icon-wrench"></i>&nbsp;Setup</h5>
+            <div>
+                <pre>@@Html.Audio(new AudioOptions()
+{
+    Mp3Url = &quot;Content/audio/jazz.mp3&quot;,
+    OggUrl = &quot;Content/audio/jazz.ogg&quot;,
+    WavUrl = &quot;Content/audio/jazz.wav&quot;,
+    AudioNotSupported = &quot;&lt;p&gt;This browser does not support the audio.&lt;/p&gt;&quot;,
+    HasDownloadLink = true
+}, new { @@class = &quot;audio&quot;, id = &quot;audio1&quot; })
+                </pre>
+            </div>
         </div>
     </div>
 </div>
